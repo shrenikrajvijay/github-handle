@@ -1,0 +1,20 @@
+{
+  "name": "shipt-github",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shrenikrajvijay/github-handle.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shrenikrajvijay/github-handle/issues"
+  },
+  "homepage": "https://github.com/shrenikrajvijay/github-handle#readme"
+}
