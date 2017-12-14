@@ -5,9 +5,9 @@ $theme : #72b03a;
 }
 
 html, body {
+  @extend .full-height;
   padding: 0;
   margin: 0;
-  @extend .full-height;
 }
 
 .theme {
@@ -16,5 +16,5 @@ html, body {
 }
 
 .container {
-
+  @extend .full-height
 }
