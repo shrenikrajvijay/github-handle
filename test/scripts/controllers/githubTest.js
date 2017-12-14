@@ -12,4 +12,8 @@ describe("github main page", () => {
         expect(true).toBeTruthy();
     })
 
+    it("should initialize the handle variable", () => {
+        expect($scope.handle).toBeDefined();
+    })
+
 })
