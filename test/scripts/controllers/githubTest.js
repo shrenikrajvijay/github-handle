@@ -1,5 +1,5 @@
 describe("github main page", () => {
-    beforeEach(module("github"));
+    beforeEach(module("github", ['ui.select', 'ngSanitize']));
 
     var $controller, $scope;
 
@@ -13,7 +13,7 @@ describe("github main page", () => {
     })
 
     it("should initialize the handle variable", () => {
-        expect($scope.handle).toBeDefined();
+        expect($scope.github).toBeDefined();
     })
 
 })

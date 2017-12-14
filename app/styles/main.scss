@@ -8,6 +8,10 @@ html, body {
   @extend .full-height;
   padding: 0;
   margin: 0;
+
+  body{
+    background-color: $theme;
+  }
 }
 
 .theme {
@@ -16,5 +20,14 @@ html, body {
 }
 
 .container {
-  @extend .full-height
+  @extend .full-height;
+  width: 60%;
+  margin: 0 auto;
+  background-color: white;
+}
+
+.ui-select{
+  width: 60%;
+  margin : 0 auto;
+  margin-top: 50px;
 }

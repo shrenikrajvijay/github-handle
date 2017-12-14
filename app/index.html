@@ -3,9 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Github Handle</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-select/0.17.1/select.css" />
+    <script src="scripts/bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.6.7/angular-sanitize.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-select/0.17.1/select.js"></script>
+
 </head>
 <body ng-app="github">
-    <div class="container" ng-controller="handle"></div>
-    <script src="scripts/bundle.min.js"></script>
+    <div class="container" ng-controller="handle">
+        <ui-select class="ui-select" ng-keyup="getMatchingUsers($select.search)" ng-model="github.selected" ng-change="getSelectedUser($select.selected)">
+            <ui-select-match  placeholder="Search github user...">{{$select.selected}}</ui-select-match>
+            <ui-select-choices repeat="item in github.list | filter: $select.search">
+                <span ng-bind-html="item | highlight: $select.search"></span>
+            </ui-select-choices>
+        </ui-select>
+    </div>
+
+
 </body>
 </html>

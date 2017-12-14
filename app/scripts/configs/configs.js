@@ -1,9 +1,11 @@
 require('../../styles/main.scss');
 require('../../../bower_components/angular/angular.js');
 require('../../../bower_components/angular-mocks/angular-mocks.js');
-require('../../../bower_components/angular-bootstrap/ui-bootstrap.min.jsx');
+require('../../../node_modules/ui-select/dist/select.min')
 
-angular.module("github", ['ui.bootstrap'])
+
+angular.module("github", ['ui.select', 'ngSanitize'])
     .constant('API_GITHUB', 'https://api.github.com')
-    .constant('GET_USER', 'users')
-    .constant('SEARCH_USERS', 'search/users');
+    .constant('GET_USER', '/users')
+    .constant('SEARCH_USERS', '/search/users?q=')
+    .constant('SEARCH_INTERVAL', 100);
