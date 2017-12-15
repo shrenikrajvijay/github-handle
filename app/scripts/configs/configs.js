@@ -17,4 +17,14 @@ angular.module("github", ['ui.select', 'ngSanitize'])
                 input.push(i);
             return input;
         };
+    })
+    .directive('followers', function() {
+        return {
+            restrict: 'E',
+            transclude: true,
+            scope: {
+                'close': '&onClose'
+            },
+            templateUrl: 'my-dialog-close.html'
+        };
     });

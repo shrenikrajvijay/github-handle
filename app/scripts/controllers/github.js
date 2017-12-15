@@ -23,14 +23,21 @@ angular.module("github")
       })
     }
 
-    $scope.nextPage = function(page){
-        $scope.github.page = page;
+    $scope.getSelected = function(handle) {
+        $scope.github.selected = handle;
+        getSelectedUserAPI(handle)
+    }
+
+    $scope.nextPage = function(){
+        $scope.github.page++;
         var method = 'GET';
         var url = API_GITHUB+GET_USER+"/"+$scope.github.selected+"/followers?per_page="+NO_OF_USERS+"&page="+$scope.github.page;
         $http({method: method, url: url}).
         then(function(response) {
-            $scope.github.follower = {}
-            $scope.github.follower.url = response.data
+            if(!$scope.github.follower)$scope.github.follower = {}
+            for (var i=0; i<response.data.length; i++){
+                $scope.github.follower.url.push(response.data[i]);
+            }
         }, function(response) {
             console.log(response);
         })

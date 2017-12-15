@@ -15,28 +15,28 @@
 </head>
 <body ng-app="github" ng-cloak>
     <div class="container" ng-controller="handle">
+        <h1 class="heading"> Github User Search </h1>
         <ui-select class="ui-select" ng-keyup="getMatchingUsers($select.search)" ng-model="github.selected" ng-change="getSelectedUser(github.selected)">
-            <ui-select-match style="width:100%;" placeholder="Search github user...">{{$select.selected}}</ui-select-match>
+            <ui-select-match style="width:100%;" placeholder="Search a github user...">{{$select.selected}}</ui-select-match>
             <ui-select-choices repeat="item in github.list | filter: $select.search">
                 <span ng-bind-html="item | highlight: $select.search"></span>
             </ui-select-choices>
         </ui-select>
-        <div class="row center" ng-if="github.selected">
+        <div class="row user" ng-if="github.selected">
             <div class="col-sm-4"><img class="img-thumbnail fixed-width" ng-src="{{github.avatar_url}}" /></div>
             <div class="col-sm-4 title"><span>{{github.selected | uppercase}}</span></div>
             <div class="col-sm-4 title">{{github.followers}} followers</div>
         </div>
         <div class="followers">
             <div class=row ng-repeat="letter in github.follower.url" ng-if="$index%6==0">
-                <div class="col-xs-2 padding"
+                <div class="col-xs-2 image-padding"
                      ng-repeat="i in [$index,$index+1,$index+2,$index+3, $index+4, $index+5]">
-                    <div ng-if="github.follower.url[i].avatar_url" style="text-align:center"><img class="img-thumbnail fixed-width" ng-src="{{github.follower.url[i].avatar_url}}"></div>
+                    <div ng-if="github.follower.url[i].avatar_url" style="text-align:center"><img ng-click="getSelected(github.follower.url[i].login)" class="img-thumbnail fixed-width pointer" ng-src="{{github.follower.url[i].avatar_url}}"></div>
                 </div>
             </div>
         </div>
-        <div class="right">
-            <!--<button ng-if="areThereMoreFollowers()" ng-click="nextPage()" class="btn btn-success">Load more..</button>-->
-            <button ng-class="(i+1 == github.page) ? 'button blue' : 'button'" ng-repeat="i in [] | range:github.followers/24" ng-if="areThereMoreFollowers()" ng-click="nextPage(i+1)" class="btn btn-success">{{i+1}}</button>
+        <div class="center">
+            <button ng-if="areThereMoreFollowers()" ng-click="nextPage()" class="btn btn-success">Load more..</button>
         </div>
     </div>
 
