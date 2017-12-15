@@ -9,4 +9,12 @@ angular.module("github", ['ui.select', 'ngSanitize'])
     .constant('GET_USER', '/users')
     .constant('SEARCH_USERS', '/search/users?q=')
     .constant('SEARCH_INTERVAL', 500)
-    .constant('NO_OF_USERS', 10);
+    .constant('NO_OF_USERS', 24)
+    .filter('range', function() {
+        return function(input, total) {
+            total = parseInt(total);
+            for (var i=0; i<total; i++)
+                input.push(i);
+            return input;
+        };
+    });

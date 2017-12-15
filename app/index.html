@@ -34,8 +34,9 @@
                 </div>
             </div>
         </div>
-        <div class="center">
-            <button ng-if="areThereMoreFollowers()" ng-click="nextPage()" class="btn btn-success">Load more..</button>
+        <div class="right">
+            <!--<button ng-if="areThereMoreFollowers()" ng-click="nextPage()" class="btn btn-success">Load more..</button>-->
+            <button ng-class="(i+1 == github.page) ? 'button blue' : 'button'" ng-repeat="i in [] | range:github.followers/24" ng-if="areThereMoreFollowers()" ng-click="nextPage(i+1)" class="btn btn-success">{{i+1}}</button>
         </div>
     </div>
 

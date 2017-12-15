@@ -28,9 +28,10 @@ html, body {
 .container {
   @extend .full-height;
   width: $container-width;
-  margin: 0 auto;
+  margin: 20px auto;
   background-color: $container-color;
   overflow: scroll;
+
 }
 
 .followers{
@@ -40,6 +41,17 @@ html, body {
 
 .center {
   text-align : center;
+  margin-bottom: 20px;
+}
+
+.right {
+  text-align : right;
+  margin-bottom: 20px;
+}
+
+.button {
+  margin: 3px;
+  background-color: #796971;
 }
 
 .letter-box{
@@ -64,6 +76,10 @@ html, body {
 
 .fixed-width {
   width: 100px;
+}
+
+.blue {
+  background-color: #6396c1;
 }
 
 .title{

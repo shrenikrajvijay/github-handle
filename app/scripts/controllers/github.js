@@ -23,8 +23,8 @@ angular.module("github")
       })
     }
 
-    $scope.nextPage = function(){
-        $scope.github.page++;
+    $scope.nextPage = function(page){
+        $scope.github.page = page;
         var method = 'GET';
         var url = API_GITHUB+GET_USER+"/"+$scope.github.selected+"/followers?per_page="+NO_OF_USERS+"&page="+$scope.github.page;
         $http({method: method, url: url}).
