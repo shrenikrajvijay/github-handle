@@ -8,4 +8,5 @@ angular.module("github", ['ui.select', 'ngSanitize'])
     .constant('API_GITHUB', 'https://api.github.com')
     .constant('GET_USER', '/users')
     .constant('SEARCH_USERS', '/search/users?q=')
-    .constant('SEARCH_INTERVAL', 100);
+    .constant('SEARCH_INTERVAL', 500)
+    .constant('NO_OF_USERS', 10);

@@ -1,4 +1,6 @@
-$theme : #72b03a;
+$theme : #796971;
+$container-width: 70%;
+$container-color : #d5d5d5;
 
 .full-height {
   height: 100%;
@@ -19,15 +21,52 @@ html, body {
   color: white;
 }
 
+.padding{
+  padding: 15px 0px;
+}
+
 .container {
   @extend .full-height;
-  width: 60%;
+  width: $container-width;
   margin: 0 auto;
-  background-color: white;
+  background-color: $container-color;
+  overflow: scroll;
+}
+
+.followers{
+  padding : 35px 0px;
+  margin : 35px 0px;
+}
+
+.center {
+  text-align : center;
+}
+
+.letter-box{
+  margin-bottom: 5px;
+  box-shadow: 3px 3px 2px #ddd;
 }
 
 .ui-select{
   width: 60%;
   margin : 0 auto;
   margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.select2-choices {
+  position: relative;
+}
+.ui-select-multiple input.ui-select-search {
+  width: 100% !important;
+  position: absolute;
+}
+
+.fixed-width {
+  width: 100px;
+}
+
+.title{
+  line-height: 100px;
+  font-size: 20px;
 }
