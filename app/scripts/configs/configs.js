@@ -1,8 +1,6 @@
 require('../../styles/main.scss');
 require('../../../bower_components/angular/angular.js');
 require('../../../bower_components/angular-mocks/angular-mocks.js');
-require('../../../node_modules/ui-select/dist/select.min')
-
 
 angular.module("github", ['ui.select', 'ngSanitize'])
     .constant('API_GITHUB', 'https://api.github.com')

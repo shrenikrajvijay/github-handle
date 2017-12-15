@@ -35,6 +35,10 @@ html, body {
         margin : 0 auto;
         margin-top: 50px;
         margin-bottom: 50px;
+
+        input{
+          width : 100%;
+        }
       }
 
       .select2-choices {
@@ -64,11 +68,20 @@ html, body {
         padding : 35px 0px;
         margin : 35px 0px;
 
-        .image-padding{
-          padding: 15px 0px;
+        .number-of-images{
+          width : (100%/$numOfImagesInARow);
+          float: left;
+          position: relative;
+          min-height: 1px;
+          padding-right: 15px;
+          padding-left: 15px;
         }
 
-        .image-padding {
+        .image-padding{
+          padding: 15px 5px;
+        }
+
+        img {
           cursor : pointer;
         }
       }
@@ -76,33 +89,12 @@ html, body {
       .center{
         text-align: center;
         margin: 20px auto;
+
+        .button{
+           background-color: $theme;
+          border-color:$theme;
+        }
       }
     }
   }
-}
-
-.button {
-  margin: 3px;
-  background-color: #796971;
-  background-color: $theme;
-}
-
-.letter-box{
-  margin-bottom: 5px;
-  box-shadow: 3px 3px 2px #ddd;
-}
-
-.ui-select{
-  width: 60%;
-  margin : 0 auto;
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-
-.select2-choices {
-  position: relative;
-}
-.ui-select-multiple input.ui-select-search {
-  width: 100% !important;
-  position: absolute;
 }
