@@ -2,19 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Github Handle</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-select/0.17.1/select.css" />
+    <title>Github User Search</title>
     <script src="scripts/bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.6.7/angular-sanitize.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-select/0.17.1/select.js"></script>
 
 </head>
 <body ng-app="github" ng-cloak>
     <div class="container" ng-controller="handle">
-        <h1 class="heading"> Github User Search </h1>
+        <loading></loading>
+        <a href="/"><h1 class="heading"> Github User Search </h1></a>
         <ui-select class="ui-select" ng-keyup="getMatchingUsers($select.search)" ng-model="github.selected" ng-change="getSelectedUser(github.selected)">
             <ui-select-match placeholder="Search a github user...">{{$select.selected}}</ui-select-match>
             <ui-select-choices repeat="item in github.list | filter: $select.search">
@@ -27,19 +22,18 @@
             <div class="col-sm-4 title">{{github.followers}} followers</div>
         </div>
         <div class="followers">
-            <div class=row ng-repeat="letter in github.follower.url" ng-if="$index%6==0">
+            <div class=row ng-repeat="letter in github.follower.url" ng-if="$index%github.number_of_followers_in_a_row==0">
                 <div class="number-of-images image-padding"
-                     ng-repeat="i in [$index,$index+1,$index+2,$index+3, $index+4, $index+5]">
-                    <div ng-if="github.follower.url[i].avatar_url" style="text-align:center"><img ng-click="getSelectedUser(github.follower.url[i].login)" class="img-thumbnail fixed-width pointer" ng-src="{{github.follower.url[i].avatar_url}}"></div>
+                     ng-repeat="i in [] | range:$index:github.number_of_followers_in_a_row">
+                    <div ng-if="github.follower.url[i].avatar_url"><img ng-click="getSelectedUser(github.follower.url[i].login)" class="img-thumbnail pointer follower-image" ng-src="{{github.follower.url[i].avatar_url}}"></div>
                 </div>
             </div>
         </div>
         <div class="center" ng-if="areThereMoreFollowers()">
+            <!--Uncomment the next line to change from load more to page numbers -->
+            <!--<button ng-click="loadMore(i+1)" ng-repeat="i in [] | range:0:github.pages" ng-class="(i+1==github.page) ? 'btn page-selected' : 'btn button'">{{i+1}}</button>-->
             <button ng-click="loadMore()" class="btn btn-success button">Load more..</button>
         </div>
     </div>
-
-
-
 </body>
 </html>

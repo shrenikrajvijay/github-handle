@@ -10,10 +10,11 @@ module.exports = {
     path: __dirname + "/app/scripts",
     filename: "bundle.min.js"
   },
-    module: {
+  module: {
         loaders: [
             { test: /\.css$/, loader: "style-loader!css-loader" },
-            { test: /\.scss$/, loader: 'style-loader!css-loader!sass-loader' }
+            { test: /\.scss$/, loader: 'style-loader!css-loader!sass-loader' },
+            { test: /\.(ttf|eot|woff|woff2|svg)$/, loader: "file-loader", options: {name: "../fonts/[name].[ext]"}},
         ]
   },
   plugins: debug ? [new ExtractTextPlugin('style.css')] : [

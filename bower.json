@@ -1,0 +1,25 @@
+{
+  "name": "shipt-github",
+  "description": "",
+  "main": "index.html",
+  "authors": [
+    "Vijay Shrenikraj"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/shrenikrajvijay/github-handle",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-sanitize": "^1.6.7",
+    "angular-mocks": "^1.6.7",
+    "angular-ui-select": "^0.19.8",
+    "angular": "^1.6.7",
+    "jquery": "^3.2.1",
+    "bootstrap": "^3.3.7"
+  }
+}

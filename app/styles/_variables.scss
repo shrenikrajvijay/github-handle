@@ -1,4 +1,7 @@
-$theme : #796971;
+$theme : #3f6b9a;
 $container-width: 70%;
-$container-color : #d5d5d5;
-$numOfImagesInARow : 6;
+$container-color : #d9dce6;
+
+//if you change this, then change the variable NO_OF_FOLLOWERS_TO_SHOW_IN_A_ROW in configs.js to the same value,
+//and repackage (i.e., run `webpack` from the root folder in order to generate new bundle.js)
+$numOfImagesInARow : 5;
