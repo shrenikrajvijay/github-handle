@@ -16,11 +16,14 @@ Technologies Used:
 
 Reasoning behind using the above mentioned technologies:
 
-* AngularJS : It is good for a single-page application. Also because I am well versed with the framework and know or have an idea of how it works internally.
+* AngularJS : It is good for a single-page application. Another reason is because I am well versed with the framework and know/have an idea of how it works internally.
 * SCSS: It helps to structure css just like html which helps in readibility
 * Bootstrap: It helps us to quickly use elements like buttons and other useful resources without writing much code.
 * Webpack: Helps to combine Javascript/css into one file, which then can be included in the html file (bundle.min.js).
-* bower: helps to keep the versions of the front-end technologies up to date and have a flat dependency tree rather than nested of npm.
+* bower: helps to keep the versions of the front-end technologies up to date and also have a flat dependency tree rather than nested dependency tree like npm.
+
+If I had ample time, I would have chosen react and redux to develop the same application. React has it's virtual dom that updates only the portion of the dom that has changed.
+Thus helps increasing the performance of the application. 
 
 Other interesting projects:
 
