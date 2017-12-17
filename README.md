@@ -41,6 +41,10 @@ Installation:
 		cd github-handle (to the project folder)
 		npm install
 
+4. Start the server by running,
+
+		npm start
+
 5. After all the above is set up, issue reques to server by typing in the following inside the web browser,
 	- localhost:2020
 
