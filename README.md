@@ -54,3 +54,7 @@ If everything went well, then you should see the web page.
 SCREENSHOTS:
 
 
+![alt text] (https://github.com/shrenikrajvijay/github-handle/blob/master/screenshot-1.png)
+![alt text] (https://github.com/shrenikrajvijay/github-handle/blob/master/screenshot-2.png)
+![alt text] (https://github.com/shrenikrajvijay/github-handle/blob/master/screenshot-3.png)
+![alt text] (https://github.com/shrenikrajvijay/github-handle/blob/master/screenshot-4.png)
