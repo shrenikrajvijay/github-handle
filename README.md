@@ -35,6 +35,9 @@ My public profile:
 
 https://www.linkedin.com/in/vijayshrenikraj/
 
+Link to hosted application:
+http://ec2-34-216-205-59.us-west-2.compute.amazonaws.com/
+
 Installation:
 1. Clone this respository to your local folder,
 
@@ -61,10 +64,12 @@ Installation:
 
 		cd github-handle (to the project folder)
 		npm install
+		npm i -g bower
 		bower update
 
 4. Start the server by running,
 
+		npm i -g -S concurrently
 		npm start
 
 5. After all the above is set up, issue reques to server by typing in the following inside the web browser,
