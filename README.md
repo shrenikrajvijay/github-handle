@@ -36,10 +36,11 @@ Installation:
 		[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 
-3. Run npm install (from the project folder) to install all the dependencies,
+3. Run npm install and bower update (from the project folder) to install all the dependencies,
 
 		cd github-handle (to the project folder)
 		npm install
+		bower update
 
 4. Start the server by running,
 
