@@ -16,17 +16,17 @@ Technologies Used:
 
 Reasoning behind using the above mentioned technologies:
 
-AngularJS : It is good for a single-page application. Also because I am well versed with the framework and know or have an idea of how it works internally.
-SCSS: It helps to structure css just like html which helps in readibility
-Bootstrap: It helps us to quickly use elements like buttons and other useful resources without writing much code.
-Webpack: Helps to combine Javascript/css into one file, which then can be included in the html file (bundle.min.js).
-bower: helps to keep the versions of the front-end technologies up to date and have a flat dependency tree rather than nested of npm.
+* AngularJS : It is good for a single-page application. Also because I am well versed with the framework and know or have an idea of how it works internally.
+* SCSS: It helps to structure css just like html which helps in readibility
+* Bootstrap: It helps us to quickly use elements like buttons and other useful resources without writing much code.
+* Webpack: Helps to combine Javascript/css into one file, which then can be included in the html file (bundle.min.js).
+* bower: helps to keep the versions of the front-end technologies up to date and have a flat dependency tree rather than nested of npm.
 
 Other interesting projects:
 
-https://github.com/shrenikrajvijay/Cost-To-Company
-https://github.com/shrenikrajvijay/Loyalty-Program
-https://github.com/shrenikrajvijay/Monopoly-Empire-with-UI
+* https://github.com/shrenikrajvijay/Cost-To-Company
+* https://github.com/shrenikrajvijay/Loyalty-Program
+* https://github.com/shrenikrajvijay/Monopoly-Empire-with-UI
 
 My public profile:
 
